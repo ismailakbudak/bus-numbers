@@ -3,8 +3,24 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.2'
 
-# Use postgresql as the database for Active Record
-gem 'pg'
+
+# Uİ design 
+gem 'bootstrap-sass', '2.3.2.0'
+
+#  environment nil hatası için 
+gem 'sprockets', '2.11.0'
+
+
+# şifre için
+gem 'bcrypt-ruby', '3.1.2'
+
+# sahte kullanıcılar için
+gem 'faker', '1.1.2'
+
+# Sayfalama yapmak için
+gem 'will_paginate', '3.0.4'
+gem 'bootstrap-will_paginate', '0.0.9'
+
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
@@ -31,15 +47,8 @@ group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
 end
-
-# Use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.1.2'
-
-# Use unicorn as the app server
-# gem 'unicorn'
-
-# Use Capistrano for deployment
-# gem 'capistrano', group: :development
-
-# Use debugger
-# gem 'debugger', group: [:development, :test]
+ 
+group :production do
+  gem 'pg', '0.15.1'
+  gem 'rails_12factor'
+end

@@ -17,10 +17,10 @@
 development:
   adapter: postgresql
   encoding: unicode
-  database: bus-numbers_development
+  database: busnumbers_development
   pool: 5
-  username: bus-numbers
-  password:
+  username: iso
+  password: 'pass'
 
   # Connect on a TCP socket. Omitted by default since the client uses a
   # domain socket that doesn't need configuration. Windows does not have
@@ -46,15 +46,15 @@ development:
 test:
   adapter: postgresql
   encoding: unicode
-  database: bus-numbers_test
+  database: busnumbers_development
   pool: 5
-  username: bus-numbers
-  password:
+  username: iso
+  password: 'pass'
 
 production:
   adapter: postgresql
   encoding: unicode
-  database: bus-numbers_production
+  database: busnumbers_development
   pool: 5
-  username: bus-numbers
-  password:
+  username: iso
+  password: 'pass'
