@@ -15,7 +15,7 @@
   - look /config/locales/models
   - look /config/locales/tr.yml
   - look /config/locales/en.yml
-  - 
+
 * boostrap problems solved
 * font awesome and glyphicon icons 
 * bootstrap-will_paginate css is ready 
