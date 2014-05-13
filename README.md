@@ -17,3 +17,6 @@
 * bootstrap-will_paginate css is ready 
   -look /app/assets/stylesheets/custom.css.scss 
 * tooltip and popover
+
+ 
+<tt>I love RoR :)</tt>.
