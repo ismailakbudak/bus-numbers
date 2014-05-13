@@ -10,10 +10,10 @@
             
             <%= render 'form', f: f  %>
           
-            <aside class="form-group">
-                <div class="col-lg-4"></div>
-                <%= f.submit  I18n.t('views.product.new.create'),  class: "btn btn-large btn-primary" %>
-                <%= link_to I18n.t('views.back'), products_path,  class: "btn btn-large btn-primary"  %>   
+            <aside class="form-group tx-center">
+                 
+                <%= f.submit  I18n.t('views.product.new.create'),  class: "btn btn-large btn-primary wd-15" %>
+                <%= link_to I18n.t('views.back'), products_path,  class: "btn btn-large btn-primary wd-15"  %>   
             </aside>
 
         <% end %>

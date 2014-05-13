@@ -6,11 +6,11 @@
     	<fieldset>  
 		    <%= form_for(@product, :html => { class: "form-horizontal" } ) do |f| %>
 		        <%= render 'form', f: f %>  
-		        <aside class="form-group">
-		        	<div class="col-lg-3"></div>
-		            <%= f.submit  I18n.t('views.product.edit.update'),  class: "btn btn-large btn-primary"  %>
-                    <%= link_to I18n.t('views.show'), @product ,  class: "btn btn-large btn-primary"  %> 
-                    <%= link_to I18n.t('views.back'), products_path,  class: "btn btn-large btn-primary"   %>
+		        <aside class="form-group tx-center">
+		        	 
+		            <%= f.submit  I18n.t('views.product.edit.update'),  class: "btn btn-large btn-primary wd-15"  %>
+                    <%= link_to I18n.t('views.show'), @product ,  class: "btn btn-large btn-primary wd-15"  %> 
+                    <%= link_to I18n.t('views.back'), products_path,  class: "btn btn-large btn-primary wd-15"   %>
 		        </aside>
 		    <% end %>
 		</fieldset>  

@@ -5,7 +5,8 @@
    <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
    <%= stylesheet_link_tag    "bootstrap.min.css", media: "all", "data-turbolinks-track" => true %>
    <%= stylesheet_link_tag    "bootswatch.min.css", media: "all", "data-turbolinks-track" => true %>
-
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  
   <!-- Latest compiled and minified CSS 
    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
@@ -16,9 +17,7 @@
    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
   -->
      
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %> 
-  <%= javascript_include_tag "bootstrap.min.js", "data-turbolinks-track" => true  %>
-  <%= javascript_include_tag "bootswatch.js", "data-turbolinks-track" => true  %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>   
   <%= csrf_meta_tags %>
   <%= render 'layouts/shim' %>
 </head>
@@ -26,7 +25,6 @@
       <%= render 'layouts/header' %> 
       <br>
       <div class="container" >
-        
         <div class="row" >
           <div class="col-lg-3"></div>
             <div class="col-lg-6" > 
@@ -36,12 +34,11 @@
             </div>
             <div class="col-lg-3"></div>
         </div>
-
         <%= yield %>
-
-    </div>  
-        <%= render 'layouts/footer' %>
-        <%= debug(params) if Rails.env.development? %> 
-
+      </div>  
+      <%= render 'layouts/footer' %>
+      <%= debug(params) if Rails.env.development? %> 
+      <%= javascript_include_tag "bootstrap.min.js", "data-turbolinks-track" => true  %>
+      <%= javascript_include_tag "bootswatch.js", "data-turbolinks-track" => true  %>
 </body>
 </html>

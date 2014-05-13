@@ -37,6 +37,8 @@ tr:
     error: 
         one:   "%{count}  hata gerçekleşti"
         other: "%{count}  hata gerçekleşti"
+    message:
+        sory: Üzgünüm         
     # The default format to use in full error messages.
     format: "%{attribute} %{message}"
 

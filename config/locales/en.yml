@@ -37,8 +37,10 @@ en:
     error: 
         one:   "%{count} error occurred"
         other: "%{count} errors occurred"
+    message:
+        sory: Sory     
     # The default format to use in full error messages.
-    format: "%{attribute} %{message}"
+    format: " %{attribute} %{message}"
 
     # The values :model, :attribute and :value are always available for interpolation
     # The value :count is available when applicable. Can be used for pluralization.
@@ -95,7 +97,7 @@ en:
           many: "Cannot delete record because dependent %{record} exist"   
       <<: *errors_messages
       full_messages:
-        format: "The %{attribute} %{message}"     
+        format: "%{attribute} %{message}"     
 
 
       # Append your own errors here or at the model/attributes scope.
