@@ -1,11 +1,10 @@
  
 
- <fieldset class="col-lg-5" > 
     <%= render 'shared/error_messages', object: f.object %>
 
     <div class="form-group">
         <%= f.label :name, class: "col-lg-2 control-label" %>
-      <div class="col-lg-10"> 
+      <div class="col-lg-8"> 
          <%= f.text_field :name, class: "form-control" %>
       </div>
     </div>
@@ -13,7 +12,7 @@
 
     <div class="form-group">
         <%= f.label :description, class: "col-lg-2 control-label" %>
-      <div class="col-lg-10"> 
+      <div class="col-lg-8"> 
          <%= f.text_field :description, class: "form-control" %>
       </div>
     </div>
@@ -21,8 +20,7 @@
 
     <div class="form-group">
         <%= f.label :price, class: "col-lg-2 control-label" %>
-      <div class="col-lg-10"> 
+      <div class="col-lg-8"> 
          <%= f.text_field :price, class: "form-control" %>
       </div>
     </div>
- </fieldset>     

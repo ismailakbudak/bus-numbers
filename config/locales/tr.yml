@@ -26,6 +26,12 @@ tr:
     #created_at: "Created at"
     #updated_at: "Updated at"
 
+  # Willpaginage language
+  will_paginate:
+    previous_label: "&#8592; Önceki"
+    next_label: "Sonraki &#8594;"
+    page_gap: "&hellip;"
+
   # Default error messages
   errors:
     error: 

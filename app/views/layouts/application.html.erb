@@ -2,8 +2,8 @@
 <html>
 <head>
   <title>BusNumbers</title>
-   <%= stylesheet_link_tag    "bootstrap.min.css", media: "all", "data-turbolinks-track" => true %>
    <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+   <%= stylesheet_link_tag    "bootstrap.min.css", media: "all", "data-turbolinks-track" => true %>
    <%= stylesheet_link_tag    "bootswatch.min.css", media: "all", "data-turbolinks-track" => true %>
 
   <!-- Latest compiled and minified CSS 
@@ -28,18 +28,20 @@
       <div class="container" >
         
         <div class="row" >
+          <div class="col-lg-3"></div>
             <div class="col-lg-6" > 
                  <% flash.each do |key, value| %>
                     <div class="alert alert-dismissable alert-<%= key %>"><%= value %></div>
                  <% end %>
             </div>
+            <div class="col-lg-3"></div>
         </div>
 
         <%= yield %>
-  
+
+    </div>  
         <%= render 'layouts/footer' %>
         <%= debug(params) if Rails.env.development? %> 
 
-    </div>
 </body>
 </html>

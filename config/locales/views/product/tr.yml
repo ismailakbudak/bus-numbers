@@ -39,6 +39,8 @@ tr:
       new:
         title: Yeni Ürün
         create: Oluştur
+      show:
+         title: Ürün detayları   
       flash_messages:
         product_was_successfully_created: 'Ürün başarıyla oluşturuldu.'
         product_was_successfully_updated: 'Ürün başarıyla güncellendi.'

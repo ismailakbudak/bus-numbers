@@ -39,6 +39,8 @@ en:
       new:
         title: New product
         create: Create product
+      show:
+         title: Product detail
       flash_messages:
         product_was_successfully_created: 'Product was successfully created.'
         product_was_successfully_updated: 'Product was successfully updated.'
