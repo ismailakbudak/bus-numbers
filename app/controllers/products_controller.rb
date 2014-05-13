@@ -28,7 +28,8 @@ class ProductsController < ApplicationController
 
     respond_to do |format|
       if @product.save
-        format.html { redirect_to @product, notice: I18n.t('views.product.flash_messages.product_was_successfully_created') }
+        flash[:success] = I18n.t('views.product.flash_messages.product_was_successfully_created')
+        format.html { redirect_to @product }
         format.json { render action: 'show', status: :created, location: @product }
       else
         format.html { render action: 'new' }
@@ -42,7 +43,8 @@ class ProductsController < ApplicationController
   def update
     respond_to do |format|
       if @product.update(product_params)
-        format.html { redirect_to @product, notice: I18n.t('views.product.flash_messages.product_was_successfully_updated') }
+        flash[:success] = I18n.t('views.product.flash_messages.product_was_successfully_updated')
+        format.html { redirect_to @product }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }

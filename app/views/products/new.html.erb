@@ -1,11 +1,19 @@
 <h1><%= t 'views.product.new.title' %></h1>
 
-<%= form_for(@product) do |f| %>
-  <%= render 'form', f: f  %>
-  <div class="actions">
-    <%= f.submit  I18n.t('views.product.new.create') %>
+<div class="row">
+  <div class="span6 offset3">
+    <%= form_for(@product, :html => { class: "form-horizontal" } ) do |f| %>
+        
+        <%= render 'form', f: f  %>
+      
+        <div class="form-group">
+            <div class="col-lg-10 col-lg-offset-2">
+                <%= f.submit  I18n.t('views.product.new.create'),  class: "btn btn-large btn-primary" %>
+            </div>     
+        </div>
+
+    <% end %>
   </div>
-<% end %>
+</div>
 
-
-<%= link_to I18n.t('views.back'), products_path %>
+<%= link_to I18n.t('views.back'), products_path,  class: "btn btn-large btn-primary"  %>

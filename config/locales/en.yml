@@ -82,6 +82,9 @@ en:
 
   # Default error messages
   errors:
+    error: 
+        one:   "%{count} error occurred"
+        other: "%{count} errors occurred"
     # The default format to use in full error messages.
     format: "%{attribute} %{message}"
 

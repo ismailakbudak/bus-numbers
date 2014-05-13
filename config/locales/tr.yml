@@ -28,6 +28,9 @@ tr:
 
   # Default error messages
   errors:
+    error: 
+        one:   "%{count}  hata gerçekleşti"
+        other: "%{count}  hata gerçekleşti"
     # The default format to use in full error messages.
     format: "%{attribute} %{message}"
 
@@ -77,7 +80,7 @@ tr:
       template:
         header:
           one:    "%{model} kaydı yapılırken 1 hata gerçekleşti"
-          other:  "%{model} kaydı yapılırken 1 hata gerçekleşti"
+          other:  "%{model} kaydı yapılırken %{count} hata gerçekleşti"
         body: "Aşşağıdaki alanlarda hata oluştu :"       
       messages:
         record_invalid: "Doğrulama hatalı: %{errors}"

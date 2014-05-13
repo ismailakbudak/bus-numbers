@@ -2,35 +2,44 @@
 <html>
 <head>
   <title>BusNumbers</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+   <%= stylesheet_link_tag    "bootstrap.min.css", media: "all", "data-turbolinks-track" => true %>
+   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+   <%= stylesheet_link_tag    "bootswatch.min.css", media: "all", "data-turbolinks-track" => true %>
 
-  <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
-  <!-- Optional theme -->
-  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
-  <!-- Font Awesome 4.0.3  -->
-  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
-
-   
-  <!-- Latest compiled and minified JavaScript -->
-  <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-  
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-
+  <!-- Latest compiled and minified CSS 
+   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+   <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+   <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+   <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+   <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+  -->
+     
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %> 
+  <%= javascript_include_tag "bootstrap.min.js", "data-turbolinks-track" => true  %>
+  <%= javascript_include_tag "bootswatch.js", "data-turbolinks-track" => true  %>
   <%= csrf_meta_tags %>
+  <%= render 'layouts/shim' %>
 </head>
 <body>
+      <%= render 'layouts/header' %> 
+      <br>
+      <div class="container" >
+        
+        <div class="row" >
+            <div class="col-lg-6" > 
+                 <% flash.each do |key, value| %>
+                    <div class="alert alert-dismissable alert-<%= key %>"><%= value %></div>
+                 <% end %>
+            </div>
+        </div>
 
-<p>
-  <% if I18n.locale.to_s == "en" %>
-     <%= link_to_unless I18n.locale == :tr, "Turkish", locale: :tr %>
-  <% else %>
-    <%= link_to_unless I18n.locale == :en, "English", locale: :en %>
-  <% end %>
+        <%= yield %>
+  
+        <%= render 'layouts/footer' %>
+        <%= debug(params) if Rails.env.development? %> 
 
-</p>
-
-<%= yield %>
-
+    </div>
 </body>
 </html>
