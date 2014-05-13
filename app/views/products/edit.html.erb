@@ -1,6 +1,11 @@
-<h1>Editing product</h1>
+<h1><%= t 'views.product.edit.title' %></h1>
 
-<%= render 'form' %>
+<%= form_for(@product) do |f| %>
+  <%= render 'form', f: f %>
+  <div class="actions">
+    <%= f.submit  I18n.t('views.product.edit.update') %>
+  </div>
+<% end %>
 
-<%= link_to 'Show', @product %> |
-<%= link_to 'Back', products_path %>
+<%= link_to I18n.t('views.show'), @product %> |
+<%= link_to I18n.t('views.back'), products_path %>

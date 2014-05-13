@@ -1,11 +1,11 @@
-<h1>Listing products</h1>
+<h1><%= t 'views.product.index.title' %></h1>
 
 <table>
   <thead>
-    <tr>
-      <th>Name</th>
-      <th>Description</th>
-      <th>Price</th>
+      <tr>
+      <th><%= Product.human_attribute_name(:name) %></th>
+      <th><%= Product.human_attribute_name(:description) %></th>
+      <th><%= Product.human_attribute_name(:price) %></th>
       <th></th>
       <th></th>
       <th></th>
@@ -17,10 +17,11 @@
       <tr>
         <td><%= product.name %></td>
         <td><%= product.description %></td>
-        <td><%= product.price %></td>
-        <td><%= link_to 'Show', product %></td>
-        <td><%= link_to 'Edit', edit_product_path(product) %></td>
-        <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= number_to_currency(product.price) %></td>
+        <td><%= link_to I18n.t('views.show'), product %></td>
+        <td><%= link_to I18n.t('views.edit'), edit_product_path(product) %></td>
+        <td><%= link_to I18n.t('views.destroy'), product, method: :delete, data: { confirm: I18n.t('views.are_you_sure') } %></td>
+
       </tr>
     <% end %>
   </tbody>
@@ -28,4 +29,6 @@
 
 <br>
 
-<%= link_to 'New Product', new_product_path %>
+
+<%= link_to I18n.t('views.product.index.new_product'), new_product_path %>
+

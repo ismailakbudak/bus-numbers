@@ -1,6 +1,8 @@
 BusNumbers::Application.routes.draw do
-  resources :products
   
-  root :to => 'products#index'
-  
+  resources :products  
+  scope "(:locale)", :locale => /en|tr/ do
+    root :to => 'products#index'
+  end
+
 end

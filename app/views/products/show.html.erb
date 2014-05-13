@@ -1,19 +1,19 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
+  <strong><%= Product.human_attribute_name(:name) %>:</strong>
   <%= @product.name %>
 </p>
 
 <p>
-  <strong>Description:</strong>
+  <strong><%= Product.human_attribute_name(:description) %>:</strong>
   <%= @product.description %>
 </p>
 
 <p>
-  <strong>Price:</strong>
-  <%= @product.price %>
+  <strong><%= Product.human_attribute_name(:price) %>:</strong>
+  <%= number_to_currency(@product.price)  %>
 </p>
 
-<%= link_to 'Edit', edit_product_path(@product) %> |
-<%= link_to 'Back', products_path %>
+<%= link_to I18n.t('views.edit'), edit_product_path(@product) %> |
+<%= link_to I18n.t('views.back'), products_path %>

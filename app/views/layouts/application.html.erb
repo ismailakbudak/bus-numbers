@@ -8,6 +8,15 @@
 </head>
 <body>
 
+<p>
+  <% if I18n.locale.to_s == "en" %>
+     <%= link_to_unless I18n.locale == :tr, "Turkish", locale: :tr %>
+  <% else %>
+    <%= link_to_unless I18n.locale == :en, "English", locale: :en %>
+  <% end %>
+
+</p>
+
 <%= yield %>
 
 </body>
