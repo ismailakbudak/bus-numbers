@@ -19,4 +19,4 @@
 * tooltip and popover
 
  
-<tt>I love RoR :)</tt>.
+<tt>I love RoR :)</tt>
