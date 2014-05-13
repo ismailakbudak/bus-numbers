@@ -1,28 +1,26 @@
-README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Properties 
+* Boostwach cerulean theme that is free themes for Bootstrap   
+  - look /public/stylesheets/bootsrap.min.css
+  - look /public/stylesheets/bootswatch.min.css
+  - look /public/javascripts/bootsrap.min.js
+  - look /public/javascripts/bootswatch.js
+  - look /public/fonts/*
+* error messages  for languages 
+  - look /config/locales/views
+  - look /config/locales/models
+  - look /config/locales/tr.yml
+  - look /config/locales/en.yml
+* boostrap problems solved
+* font awesome and glyphicon icons 
+* bootstrap-will_paginate css is ready 
+  -look /app/assets/stylesheets/custom.css.scss 
+* tooltip and popover
 
-Things you may want to cover:
+# Ruby version
+* ruby 2.0.0
 
-* Ruby version
+# Rails version
+* rails '4.0.2'
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+<tt> I Love RoR :) </tt>
