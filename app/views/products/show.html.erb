@@ -1,4 +1,5 @@
-  
+<% provide(:title,  I18n.t('views.product.show.title') ) %>  
+
 <div class="row">
   <div class="col-lg-3"></div>
   <aside class="col-lg-6">
@@ -23,6 +24,7 @@
            <%= number_to_currency( @product.price) %>
       </div>   
     </section>
+    <br>
     <%= link_to I18n.t('views.edit'), edit_product_path(@product),  class: "btn btn-large btn-primary wd-15"   %> 
     <%= link_to I18n.t('views.back'), products_path,  class: "btn btn-large btn-primary wd-15"   %>
 

@@ -7,6 +7,9 @@ gem 'rails', '4.0.2'
 # Uİ design 
 #gem 'bootstrap-sass', '2.3.2.0'
 
+# header tagleri için
+gem 'metamagic'
+
 #  environment nil hatası için 
 gem 'sprockets', '2.11.0'
 # şifre için

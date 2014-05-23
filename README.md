@@ -11,7 +11,7 @@
   - look /config/locales/models
   - look /config/locales/tr.yml
   - look /config/locales/en.yml
-* boostrap problems solved
+* boostrap problems solved for heroku
 * font awesome and glyphicon icons 
 * bootstrap-will_paginate css is ready 
   -look /app/assets/stylesheets/custom.css.scss 

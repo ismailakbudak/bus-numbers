@@ -1,10 +1,43 @@
 <!DOCTYPE html>
-<html>
+<html lang="<%= I18n.locale %>" >
 <head>
-  <title>BusNumbers</title>
-   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-   <%= stylesheet_link_tag    "bootstrap.min.css", media: "all", "data-turbolinks-track" => true %>
-   <%= stylesheet_link_tag    "bootswatch.min.css", media: "all", "data-turbolinks-track" => true %>
+ 
+  <!--
+  <meta name="description" content="description">
+  <meta name="keywords" content="keywords">
+  <link rel="canonical" href="">
+  <link rel="alternate" href="http://www.url.com/tr/" hreflang="tr-TR">
+  <link rel="alternate" href="http://www.url.com/en/" hreflang="en-UK">
+  <meta name="application-name" content="">
+  <meta property="fb:app_id" content="">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="http://www.url.com/">
+  <meta property="og:locale" content="">
+  <meta property="og:site_name" content="">
+  <meta property="og:title" content="">
+  <meta property="og:image" content="">
+  <meta name="copyright" content="@ Copyright 2013-2014">
+  <meta name="distribution" content="global" />
+  <meta name="author" content="İsmail Akbudak">
+  <meta name="robots" content="all">  
+  <link rel="icon" type="image/x-icon" href="">
+  <link rel="image_src" href="" />
+  -->
+  <meta charset="utf-8">
+  <%= metamagic :language           =>  get_language  ,
+                :title              => full_title( yield(:title) ) , 
+                :description        => "My default description.", 
+                :keywords           => %w(keyword1 keyword2 keyword3),
+                :"application-name" => "Bus numbers",
+                :copyright          => "@ Copyright 2013-2014",
+                :distribution       =>  "global",
+                :author             => "İsmail Akbudak",
+                :robots             => "all"                            %>
+
+  <%= favicon_link_tag 'bus-4-32.ico' %>
+  <%= stylesheet_link_tag    "application",        media: "all", "data-turbolinks-track" => true %>
+  <%= stylesheet_link_tag    "bootstrap.min.css",  media: "all", "data-turbolinks-track" => true %>
+  <%= stylesheet_link_tag    "bootswatch.min.css", media: "all", "data-turbolinks-track" => true %>
   <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
   
   <!-- Latest compiled and minified CSS 

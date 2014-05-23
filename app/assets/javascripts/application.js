@@ -14,3 +14,25 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+
+$(function(){
+    
+    $( ".capitalize" ).on('keyup',function(){
+            var text = $( this ).val();
+            if(  strcmp(  text.charAt(0), " " ) == 0 )    
+                text = jQuery.trim( text );
+            $( this ).val( text.charAt(0).toUpperCase() + text.slice(1) );
+    });
+    
+    function strcmp ( str1, str2 ) {
+                str1 = jQuery.trim(str1); 
+                str2 = jQuery.trim(str2);
+                return ( ( str1 == str2 ) ? 0 : ( ( str1 > str2 ) ? 1 : -1 ) );
+    }
+
+});
+
+ 
+ 
+ 
