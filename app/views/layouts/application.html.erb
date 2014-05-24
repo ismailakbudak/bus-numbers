@@ -26,9 +26,9 @@
   <meta charset="utf-8">
   <%= metamagic :language           =>  get_language  ,
                 :title              => full_title( yield(:title) ) , 
-                :description        => "My default description.", 
+                :description        => "description", 
                 :keywords           => %w(keyword1 keyword2 keyword3),
-                :"application-name" => "Bus numbers",
+                :"application-name" => "Otobüs Güzergahları",
                 :copyright          => "@ Copyright 2013-2014",
                 :distribution       =>  "global",
                 :author             => "İsmail Akbudak",
@@ -70,7 +70,11 @@
         <%= yield %>
       </div>  
       <%= render 'layouts/footer' %>
-      <%= debug(params) if Rails.env.development? %> 
+
+      <div class="container" >
+         <%= debug(params) if Rails.env.development? %> 
+      </div>
+
       <%= javascript_include_tag "bootstrap.min.js", "data-turbolinks-track" => true  %>
       <%= javascript_include_tag "bootswatch.js", "data-turbolinks-track" => true  %>
 </body>

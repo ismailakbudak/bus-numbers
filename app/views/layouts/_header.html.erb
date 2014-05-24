@@ -1,10 +1,10 @@
 <div class="navbar navbar-default navbar-fixed-top">
       <div class="container">
         <div class="navbar-header  "> 
-          <%= link_to ("<i class='glyphicon glyphicon-home' ></i> Bus-no").html_safe, 
+          <%= link_to ("<i class='glyphicon glyphicon-home' ></i> " + t("application.home") ).html_safe, 
                        root_path, 
                        :'class'          => "navbar-brand",
-                       :'title'          => "Tooltip on bottom",  
+                       :'title'          => t("application.home"),  
                        :'data-toggle'    => "tooltip", 
                        :'data-placement' => "bottom"   %>
           <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
@@ -18,34 +18,25 @@
            <!-- Tamamlanacak -->
           <ul class="nav navbar-nav">
             <li class="dropdown">
-              <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="themes">Themes <span class="caret"></span></a>
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="themes"> 
+                   <%= t("application.product.title") %> 
+                   <span class="caret"></span>
+              </a>
               <ul class="dropdown-menu" aria-labelledby="themes">
-                <li><a href="#">Default</a></li>
+                <li>  <%= link_to t("application.product.show"), products_path %> </li>
                 <li class="divider"></li>
-                <li><a href="#">Amelia</a></li>
-                <li><a href="#">Cerulean</a></li> 
+                <li>  <%= link_to t("application.product.add"), new_product_path %> </li> 
               </ul>
             </li>
-            <li>
-              <a href="#">Help</a>
-            </li>
-            <li>
-              <a href="#">Blog</a>
-            </li>
-            <li class="dropdown">
-              <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="download">Download <span class="caret"></span></a>
-              <ul class="dropdown-menu" aria-labelledby="download">
-                <li><a href="#">bootstrap.min.css</a></li>
-                <li><a href="#">bootstrap.css</a></li>
-                <li class="divider"></li>
-                <li><a href="#">variables.less</a></li>
-                <li><a href="#">bootswatch.less</a></li>
-              </ul>
-            </li>
+            <li> <%= link_to t("application.help"), help_path %>       </li>
+            <li> <%= link_to t("application.about"), about_path %>     </li>
+            <li> <%= link_to t("application.contact"), contact_path %> </li>
           </ul>
 
           <ul class="nav navbar-nav navbar-right">
-            <li>          
+            <li><%= link_to  t("application.signin"), "#" %></li>
+            <li><%= link_to  t("application.signup"), "#" %></li> 
+            <li  title="<%= t("application.change_language") %>" data-toggle="tooltip" data-placement="bottom" >          
               <% if I18n.locale.to_s == "en" %>
                  <%= link_to_unless  I18n.locale == :tr, ("<i class='fa fa-flag' ></i> Türkçe").html_safe,  locale: :tr %>
               <% else %>
