@@ -1,0 +1,13 @@
+en:   
+    application:
+        home: "Home"
+        product:
+            title: "Product" 
+            show: "Show"
+            add: "New Product"
+        help: "Help" 
+        about: "About" 
+        contact: "Contact"
+        change_language: "Change page language"
+        signin: "Sign In"
+        signup: "Sign Up"

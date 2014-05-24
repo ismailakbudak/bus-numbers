@@ -1,0 +1,14 @@
+
+tr:   
+    application:
+        home: "Ana Sayfa"
+        product:
+            title: "Ürünler" 
+            show: "Göster"
+            add: "Yeni Ürün"
+        help: "Yardım" 
+        about: "Hakkımızda" 
+        contact: "İletişim"
+        change_language: "Sayfa dilini değiştir"  
+        signin: "Kayıt Ol"
+        signup: "Giriş Yap"

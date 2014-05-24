@@ -1,0 +1,15 @@
+tr:
+    views:
+        home:
+            title: "Ana Sayfa"
+            description: "Otobüs güzergahları uygulamasına hoş geldiniz!!"
+            sign: "Kayıt Ol"
+        about:
+            title: "Hakkımızda"
+            description: "Otobüs numaraları sitesi hakkımızda sayfası.."
+        contact:
+            title: "İletişim" 
+            site:  "Web Sitesi" 
+        help: 
+            title: "Yardım" 
+            description: "Site hakkında yardım al"

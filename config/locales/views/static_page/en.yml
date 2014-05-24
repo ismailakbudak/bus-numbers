@@ -1,0 +1,15 @@
+en:
+    views:
+        home:
+            title: "Home"
+            description: "Welcome to bus routes app"
+            sign: "Sign Up"
+        about:
+            title:  "About Us"
+            description: "Bus routes about page.."
+        contact:
+            title: "Contact" 
+            site:  "Web Site" 
+        help: 
+            title: "Help"   
+            description: "Get help about the bus routes web site"
