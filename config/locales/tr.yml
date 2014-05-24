@@ -26,6 +26,7 @@ tr:
     #created_at: "Created at"
     #updated_at: "Updated at"
 
+
   # Willpaginage language
   will_paginate:
     previous_label: "&#8592; Önceki"
