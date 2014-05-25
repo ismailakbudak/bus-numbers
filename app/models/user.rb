@@ -19,8 +19,20 @@ class User < ActiveRecord::Base
     VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
     validates :email, presence: true, format: { with: VALID_EMAIL_REGEX },uniqueness: { case_sensitive: false }
     has_secure_password
-    validates :password, length: { minimum: 6 }
-    
+    validates :password, :length => { minimum: 6, maximum:40 },
+                         :confirmation => true,
+                         :on => :create    
+
+    validates :password, :length => { minimum: 6, maximum:40 },
+                         :confirmation => true,
+                         :on => :update_password, 
+                         :unless => lambda{ |user| user.password.blank? }
+
+    validates :password, :confirmation => true, 
+                         :length => { :within => 6..40 }, 
+                         :on => :update, 
+                         :unless => lambda{ |user| user.password.blank? }
+
     # remember me için eklendi
     def User.new_remember_token
 	    SecureRandom.urlsafe_base64
@@ -29,7 +41,8 @@ class User < ActiveRecord::Base
 	def User.digest(token)
 	  Digest::SHA1.hexdigest(token.to_s)
 	end
- 
+   
+
 	private
 
 	    def create_remember_token

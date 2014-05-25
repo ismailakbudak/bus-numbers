@@ -14,3 +14,4 @@ tr:
             district: "İlçe"
             password: 'Şifre'
             password_confirmation: "Şifre doğrulama"
+            current_password: "Şuan ki şifreniz"

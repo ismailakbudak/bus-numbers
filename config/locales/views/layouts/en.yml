@@ -15,4 +15,6 @@ en:
         account: "Account"
         profile: "Profile"
         settings: "Settings"
+        password: "Change password"
         sign_out: "Sign Out"
+        signin_please: "Please sign in."

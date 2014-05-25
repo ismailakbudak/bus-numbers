@@ -1,16 +1,35 @@
 #encoding: utf-8
 tr:
+  date:
+    order:
+      - :day
+      - :month
+      - :year
+    month_names: 
+       [~, Ocak, Şubat, Mart, Nisan, Mayıs, Haziran, Temmuz, Ağustos, Eylül, Ekim, Kasım, Aralık]
   views: 
-    user:
-      index: 
+    user: 
       edit:
-        title:  "Bilgilerini Güncelle"
-        update: "Güncelle"
+        title: "Bilgilerini Güncelle"
+        header: "Profilini güncelle" 
+        update: "Değişiklikleri Kaydet"
+        change: "Profil fotoğrafımı değiştir"
+        day: "Gün"
+        month: "Ay"
+        year: "Yıl"
+      edit_password:
+        title:  "Şifre güncelleme"
+        update: "Şifreyi kaydet"
+        header: "Şifrenizi güncelleyin" 
+        desc: "Değişiklik için şuan ki şifrenizi girmelisiniz"  
       new:
-        title:  "Yeni Kullanıcı"
+        title: "Yeni Kullanıcı"
         create: "Hesap Oluştur"
       show:
         title: "Kullanıcı Detayları"
       flash_messages:
         user_created: 'Hesabınız başarıyla oluşturuldu.'
         user_updated: 'Hesabınız başarıyla güncellendi.'
+        required_pass: "Şifrenizi güncelleyebilmek için güncel şifreniz ile yeni bir şifre girmelisiniz!" 
+        pass_updated: "Şifreniz başarıyla güncellendi"
+        pass_wrong: "Eski şifreniz yanlış"

@@ -2,10 +2,16 @@
 en:
   views:  
     user:
-      index: 
       edit:
         title:  "Edit user"
-        update: "Update user"
+        update: "Save Changes"
+        header: "Update your profile" 
+        change: "Change your profile photo"
+      edit_password:
+        title:  "Edit password"
+        update: "Save Password"
+        header: "Update your password" 
+        desc: "we need your current password to confirm your changes"  
       new:
         title:  "New user"
         create: "Create my account"
@@ -14,3 +20,6 @@ en:
       flash_messages:
         user_created: 'Your account was successfully created.'
         user_updated: 'Your account was successfully updated.'
+        required_pass: "You must login to update your password!" 
+        pass_updated: "Your password was successfully updated"
+        pass_wrong: "Your old password is wrong"

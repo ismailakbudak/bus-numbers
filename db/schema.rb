@@ -29,7 +29,7 @@ ActiveRecord::Schema.define(version: 20140525125716) do
     t.string   "name"
     t.string   "surname"
     t.string   "email"
-    t.string   "birth_date"
+    t.date     "birth_date"
     t.string   "country"
     t.string   "city"
     t.string   "district"

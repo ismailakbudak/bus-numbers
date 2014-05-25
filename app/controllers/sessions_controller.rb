@@ -1,5 +1,9 @@
 class SessionsController < ApplicationController
 	
+	def index
+	   redirect_to root_path
+	end
+
 	def new
 	end
 
@@ -7,7 +11,7 @@ class SessionsController < ApplicationController
   	    user = User.find_by(email: params[:session][:email].downcase)
 		if user && user.authenticate(params[:session][:password])
 		  sign_in user
-		  redirect_to  root_path #user
+		  redirect_to user
 		else
 		  flash.now[:danger] =  I18n.t("views.session.invalid_data")
 		  render 'new'

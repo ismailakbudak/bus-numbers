@@ -15,4 +15,6 @@ tr:
         account: "Hesap"
         profile: "Profil"
         settings: "Ayarlar"
+        password: "Şifre değiştir"
         sign_out: "Çıkış"
+        signin_please: "Lütfen giriş yapınız."
