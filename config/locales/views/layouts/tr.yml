@@ -12,3 +12,7 @@ tr:
         signin: "Giriş Yap"
         signup: "Kayıt Ol"
         welcome: 'Otobüs güzergahları uygulamasına hoş geldiniz!'
+        account: "Hesap"
+        profile: "Profil"
+        settings: "Ayarlar"
+        sign_out: "Çıkış"

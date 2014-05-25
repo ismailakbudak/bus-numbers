@@ -1,0 +1,35 @@
+<% provide(:title,  t( "views.session.new.title" ) ) %>
+ 
+<div class="row">
+	    <div class="col-lg-3"></div>
+	    <div class="col-lg-6">
+	        <fieldset> 
+			    <legend> <%= t( "views.session.new.title" ) %> </legend>
+
+			    <%= form_for(:session, url: sessions_path, :html => { class: "form-horizontal" } ) do |f| %>
+                    
+
+				    <div class="form-group">
+				        <%= f.label :email, class: "col-lg-4 control-label" %>
+				      <div class="col-lg-8"> 
+				         <%= f.text_field :email, class: "form-control " %>
+				      </div>
+				    </div>
+				    <div class="form-group">
+				        <%= f.label :password, class: "col-lg-4 control-label" %>
+				      <div class="col-lg-8"> 
+				         <%= f.password_field :password, class: "form-control" %>
+				      </div>
+				    </div>
+ 
+			        <aside class="form-group tx-center">  
+			              <%= f.submit t("views.session.new.sign_in"), class: "btn btn-large btn-primary wd-25" %>
+			        </aside>
+
+
+			    <% end %>
+                <p> <%= t("views.session.new.user") %> <%= link_to t("views.session.new.signup"), signup_path %></p>
+            </fieldset>
+        </div>
+        <div class="col-lg-3"></div>
+</div>

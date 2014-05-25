@@ -1,0 +1,10 @@
+#encoding: utf-8
+en:
+  views:  
+    session:
+      invalid_data: "Invalid email password combination!"
+      new:
+        title: "Sign In"
+        sign_in: "Sign In"
+        user: "You don't have  account?"
+        signup: "Sign up now!"

@@ -1,0 +1,10 @@
+#encoding: utf-8
+tr:
+  views:  
+    session:
+      invalid_data: "Email yada şifre yanlış!"
+      new:
+        title: "Giriş Yap"
+        sign_in: "Giriş Yap"
+        user: "Henüz hesap oluşturmadınız mı?"
+        signup: "Hemen Kayıt Ol!"

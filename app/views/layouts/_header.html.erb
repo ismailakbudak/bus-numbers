@@ -17,25 +17,46 @@
            
            <!-- Tamamlanacak -->
           <ul class="nav navbar-nav">
-            <li class="dropdown">
-              <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="themes"> 
-                   <%= t("application.product.title") %> 
-                   <span class="caret"></span>
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="themes">
-                <li>  <%= link_to t("application.product.show"), products_path %> </li>
-                <li class="divider"></li>
-                <li>  <%= link_to t("application.product.add"), new_product_path %> </li> 
-              </ul>
-            </li>
+            <% if signed_in? %>
+                <li class="dropdown">
+                  <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="themes"> 
+                       <%= t("application.product.title") %> 
+                       <span class="caret"></span>
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="themes">
+                    <li>  <%= link_to t("application.product.show"), products_path %> </li>
+                    <li class="divider"></li>
+                    <li>  <%= link_to t("application.product.add"), new_product_path %> </li> 
+                  </ul>
+                </li>
+            <% end %>
+                
             <li> <%= link_to t("application.help"), help_path %>       </li>
             <li> <%= link_to t("application.about"), about_path %>     </li>
             <li> <%= link_to t("application.contact"), contact_path %> </li>
           </ul>
 
           <ul class="nav navbar-nav navbar-right">
-            <li><%= link_to  t("application.signin"), "#" %></li>
-            <li><%= link_to  t("application.signup"), signup_path %></li> 
+            
+            <% if signed_in? %>
+               <li id="fat-menu" class="dropdown">
+                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                   <%= t( "application.account" ) %> <b class="caret"></b>
+                 </a>
+                 <ul class="dropdown-menu">
+                   <li><%= link_to  t( "application.profile" ) , current_user %></li>
+                   <li><%= link_to t( "application.settings" ), '#' %></li>
+                   <li class="divider"></li>
+                   <li>
+                     <%= link_to t( "application.sign_out" ), signout_path, method: "delete" %>
+                   </li>
+                 </ul>
+               </li>
+            <% else %>
+              <li><%= link_to  t("application.signin"), signin_path %></li>
+              <li><%= link_to  t("application.signup"), signup_path %></li> 
+            <% end %>
+          
             <li  title="<%= t("application.change_language") %>" data-toggle="tooltip" data-placement="bottom" >          
               <% if I18n.locale.to_s == "en" %>
                  <%= link_to_unless  I18n.locale == :tr, ("<i class='fa fa-flag' ></i> Türkçe").html_safe,  locale: :tr %>

@@ -12,3 +12,7 @@ en:
         signin: "Sign In"
         signup: "Sign Up"
         welcome: 'Welcome to the Bus Routes app'
+        account: "Account"
+        profile: "Profile"
+        settings: "Settings"
+        sign_out: "Sign Out"
