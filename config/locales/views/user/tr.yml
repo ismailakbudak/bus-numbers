@@ -1,0 +1,16 @@
+#encoding: utf-8
+tr:
+  views: 
+    user:
+      index: 
+      edit:
+        title:  "Bilgilerini Güncelle"
+        update: "Güncelle"
+      new:
+        title:  "Yeni Kullanıcı"
+        create: "Hesap Oluştur"
+      show:
+        title: "Kullanıcı Detayları"
+      flash_messages:
+        user_created: 'Hesabınız başarıyla oluşturuldu.'
+        user_updated: 'Hesabınız başarıyla güncellendi.'

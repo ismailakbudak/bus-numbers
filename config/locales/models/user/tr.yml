@@ -1,0 +1,16 @@
+tr:
+    activerecord:
+        models:
+          user: 'Kullanıcı'
+        attributes:
+          user:
+            username: "Kullanıcı adı"
+            name: 'İsim'
+            surname: 'Soyisim'
+            email: "Email"
+            birth_date: "Doğum tarihi"
+            country: "Ülke"
+            city: "Şehir"
+            district: "İlçe"
+            password: 'Şifre'
+            password_confirmation: "Şifre doğrulama"

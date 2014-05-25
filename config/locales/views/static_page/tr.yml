@@ -1,5 +1,5 @@
 tr:
-    views:
+    static:
         home:
             title: "Ana Sayfa"
             description: "Otobüs güzergahları uygulamasına hoş geldiniz!!"

@@ -1,4 +1,3 @@
-
 tr:   
     application:
         home: "Ana Sayfa"
@@ -10,5 +9,6 @@ tr:
         about: "Hakkımızda" 
         contact: "İletişim"
         change_language: "Sayfa dilini değiştir"  
-        signin: "Kayıt Ol"
-        signup: "Giriş Yap"
+        signin: "Giriş Yap"
+        signup: "Kayıt Ol"
+        welcome: 'Otobüs güzergahları uygulamasına hoş geldiniz!'

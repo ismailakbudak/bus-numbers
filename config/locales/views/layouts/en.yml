@@ -11,3 +11,4 @@ en:
         change_language: "Change page language"
         signin: "Sign In"
         signup: "Sign Up"
+        welcome: 'Welcome to the Bus Routes app'

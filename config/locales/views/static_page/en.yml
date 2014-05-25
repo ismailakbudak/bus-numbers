@@ -1,5 +1,5 @@
 en:
-    views:
+    static:
         home:
             title: "Home"
             description: "Welcome to bus routes app"

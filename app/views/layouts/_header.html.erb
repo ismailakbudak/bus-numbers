@@ -35,7 +35,7 @@
 
           <ul class="nav navbar-nav navbar-right">
             <li><%= link_to  t("application.signin"), "#" %></li>
-            <li><%= link_to  t("application.signup"), "#" %></li> 
+            <li><%= link_to  t("application.signup"), signup_path %></li> 
             <li  title="<%= t("application.change_language") %>" data-toggle="tooltip" data-placement="bottom" >          
               <% if I18n.locale.to_s == "en" %>
                  <%= link_to_unless  I18n.locale == :tr, ("<i class='fa fa-flag' ></i> Türkçe").html_safe,  locale: :tr %>

@@ -10,6 +10,9 @@ gem 'rails', '4.0.2'
 # header tagleri için
 gem 'metamagic'
 
+# şifre için
+gem 'bcrypt-ruby', '3.1.2'
+
 #  environment nil hatası için 
 gem 'sprockets', '2.11.0'
 # şifre için

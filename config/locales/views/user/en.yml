@@ -1,0 +1,16 @@
+#encoding: utf-8
+en:
+  views:  
+    user:
+      index: 
+      edit:
+        title:  "Edit user"
+        update: "Update user"
+      new:
+        title:  "New user"
+        create: "Create my account"
+      show:
+        title: "User detail"
+      flash_messages:
+        user_created: 'Your account was successfully created.'
+        user_updated: 'Your account was successfully updated.'

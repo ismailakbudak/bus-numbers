@@ -27,7 +27,9 @@ module BusNumbers
     config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif)
 
     
-    
+    # Otomatik assets file oluşturmaması için
+    #config.generators.stylesheets = false
+    #config.generators.javascripts = false   
 
   end
 end
