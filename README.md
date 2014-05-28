@@ -23,4 +23,5 @@
 # Rails version
 * rails '4.0.2'
 
-<tt> I Love RoR :) </tt>
+ I Love RoR :) 
+ v.1.0
