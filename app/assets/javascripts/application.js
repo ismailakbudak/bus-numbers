@@ -18,6 +18,12 @@
 
 $(function(){
     
+    // <span class="img-loader hide"></span> 
+    $( ".btn" ).on('click',function(){
+           var id = $( this ).find(".img-loader");
+           id.removeClass("hide"); 
+    });
+
     $( ".capitalize" ).on('keyup',function(){
             var text = $( this ).val();
             if(  strcmp(  text.charAt(0), " " ) == 0 )    

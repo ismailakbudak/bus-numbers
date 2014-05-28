@@ -16,8 +16,11 @@
 	                    
 	                    <%= render 'form', f: f %> 
 
-	                    <aside class="form-group tx-center">  
-				              <%= f.submit t("views.user.edit.update"), class: "btn btn-large btn-primary wd-25" %>
+	                    <aside class="form-group tx-center">   
+                            <%= button_tag(type: 'submit', class: "btn btn-large btn-primary wd-25") do %>
+                                <span class='img-loader hide'></span>  
+                                <%= t("views.user.edit.update") %>  
+                            <% end %>
 				        </aside>
 			              
                     <% end %>

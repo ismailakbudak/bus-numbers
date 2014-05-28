@@ -20,6 +20,6 @@ en:
       flash_messages:
         user_created: 'Your account was successfully created.'
         user_updated: 'Your account was successfully updated.'
-        required_pass: "You must login to update your password!" 
+        required_pass: "You must enter old and new password to update your password!" 
         pass_updated: "Your password was successfully updated"
         pass_wrong: "Your old password is wrong"

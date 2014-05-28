@@ -16,6 +16,14 @@
  .tx-right { text-align:right  }
  
 
+/* mixins */
+@mixin error_field {
+         border-color: #b94a48;
+         -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+         box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+         color: #b94a48;
+}
+
 /* errors */
 #error_explanation {
   color: #f00;
@@ -28,18 +36,48 @@
       border-color: rgba(255, 255, 255, 0);
   } 
 }
-.field_with_errors { 
+
+.field_with_errors, .field_with_errors +div { 
   .form-control, .control-label{
-      border-color: #b94a48;
-       -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-       box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-       color: #b94a48;
+        @include error_field;
+  } 
+  .input-group, .input-group-addon {
+        @include error_field;
   } 
   .control-label{
      cursor: pointer;
   }
 }
 
+ /*  image button loader */
+.img-loader.hide { display: none; }
+.img-loader {
+   display: inline-block;
+   width: 16px;
+   height: 16px;
+   margin: -3px 5px 0 0 !important;
+   background-image: url(ajax-loader-blue.gif) !important;
+   background-repeat: no-repeat !important;
+   background-position: center center !important;
+   background-color: transparent !important;
+   vertical-align: middle;
+}
+
+/* General */
+.gravatar{
+    margin: -2px 5px 0 0;
+    border-radius: 3px;
+}
+
+
+
+/* Header navbar */
+.navbar-fixed-top{   
+       .fa-home{
+          font-size: 24px;
+          line-height: 0;
+       }  
+}
 
 /* footer */
 

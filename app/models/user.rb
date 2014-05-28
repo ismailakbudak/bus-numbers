@@ -41,7 +41,10 @@ class User < ActiveRecord::Base
 	def User.digest(token)
 	  Digest::SHA1.hexdigest(token.to_s)
 	end
-   
+    
+    def fullname
+        self.name.titleize #capitalize first letter
+    end
 
 	private
 
