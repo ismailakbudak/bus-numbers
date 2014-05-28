@@ -1,11 +1,8 @@
  # ruby encoding: utf-8
-
-en: 
-
-  # Default error messages
+en:  
   errors:
     error: 
-        one:   "%{count} error occurred"
+        one: "%{count} error occurred"
         other: "%{count} errors occurred"
     message:
-        sory: Sory     
+        sory: "Sory"      

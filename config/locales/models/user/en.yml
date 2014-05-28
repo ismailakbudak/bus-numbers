@@ -1,1 +1,16 @@
 en:
+  activerecord:
+    models:
+      user: 'User'
+    attributes:
+      user:
+        username: "Username"
+        name: 'Name'
+        surname: 'Surname'
+        email: "Email"
+        birth_date: "Birth date"
+        country: "Country"
+        city: "City"
+        district: "District"
+        password: 'Password'
+        password_confirmation: "Password confiramtion"
