@@ -1,6 +1,7 @@
  # ruby encoding: utf-8
 
 en: 
+
   # Default error messages
   errors:
     error: 

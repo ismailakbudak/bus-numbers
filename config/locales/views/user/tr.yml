@@ -21,7 +21,7 @@ tr:
         title:  "Şifre güncelleme"
         update: "Şifreyi kaydet"
         header: "Şifrenizi güncelleyin" 
-        desc: "Değişiklik için şuan ki şifrenizi girmelisiniz"  
+        desc: "Değişiklik için şuanki şifrenizi girmelisiniz"  
       new:
         title: "Yeni Kullanıcı"
         create: "Hesap Oluştur"
