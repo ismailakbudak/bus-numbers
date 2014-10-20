@@ -13,7 +13,7 @@ class SessionsController < ApplicationController
 		  sign_in user
 		  redirect_to user
 		else
-		  flash.now[:danger] =  I18n.t("views.session.invalid_data")
+		  flash.now[:danger] =  I18n.t('views.session.invalid_data')
 		  render 'new'
 		end
 	end
